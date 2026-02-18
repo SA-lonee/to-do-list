@@ -1,0 +1,191 @@
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#667eea,#764ba2);
+transition:.4s;
+padding:20px;
+overflow-x:hidden;
+}
+
+.container{
+background:#fff;
+width:100%;
+max-width:420px;
+padding:28px;
+border-radius:25px;
+box-shadow:0 25px 50px rgba(0,0,0,.18);
+transition:.4s;
+position:relative;
+}
+
+h1{
+text-align:center;
+margin-bottom:18px;
+font-size:22px;
+}
+
+.input-section{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-bottom:10px;
+}
+
+input,select{
+padding:10px;
+border-radius:20px;
+border:1px solid #ddd;
+outline:none;
+font-size:14px;
+}
+
+#taskInput{flex:1;}
+
+.add-btn{
+width:45px;
+height:45px;
+border-radius:50%;
+border:none;
+background:#6c7ae0;
+color:#fff;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+.add-btn:hover{
+transform:scale(1.1);
+box-shadow:0 8px 18px rgba(108,122,224,.4);
+}
+
+.task{
+padding:12px 15px;
+border-radius:15px;
+margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#f9f9f9;
+transition:.2s;
+}
+
+.task.completed span{
+text-decoration:line-through;
+opacity:.6;
+}
+
+.delete-btn{
+background:#ff5c5c;
+border:none;
+color:white;
+width:28px;
+height:28px;
+border-radius:50%;
+cursor:pointer;
+}
+
+.high{border-left:5px solid #ff4d4d;}
+.medium{border-left:5px solid #ffaa00;}
+.low{border-left:5px solid #2ecc71;}
+
+.overdue{background:#ffe5e5;}
+
+.section-title{
+margin-top:14px;
+font-weight:bold;
+font-size:13px;
+opacity:.7;
+}
+
+.progress{
+height:8px;
+background:#ddd;
+border-radius:10px;
+margin-top:12px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:100%;
+width:0%;
+background:#6c7ae0;
+transition:width .4s ease-in-out;
+}
+
+.theme-btn{
+margin-top:18px;
+padding:10px 20px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
+}
+
+.search{
+width:100%;
+margin-bottom:12px;
+}
+
+/* 🌙 DARK MODE */
+body.dark{
+background:linear-gradient(135deg,#1f2a44,#0f2027);
+}
+
+body.dark .container{
+background:#1c1c1c;
+color:white;
+}
+
+body.dark input,
+body.dark select{
+background:#2b2b2b;
+color:white;
+border:1px solid #444;
+}
+
+body.dark .task{
+background:#2b2b2b;
+}
+
+/* 🎉 CELEBRATION POPUP */
+.celebration{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0);
+background:white;
+padding:25px 35px;
+border-radius:20px;
+font-weight:bold;
+font-size:20px;
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+transition:.4s;
+z-index:1000;
+}
+
+body.dark .celebration{
+background:#2b2b2b;
+color:white;
+}
+
+.celebration.show{
+transform:translate(-50%,-50%) scale(1);
+}
+
+/* 🎊 EMOJI RAIN */
+.emoji{
+position:fixed;
+font-size:26px;
+animation:fall linear forwards;
+pointer-events:none;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px);opacity:1;}
+100%{transform:translateY(100vh);opacity:0;}
+}

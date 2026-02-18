@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ultimate Wow To-Do</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+<h1>✨ Ultimate To-Do</h1>
+
+<input type="text" id="searchInput" class="search" placeholder="🔍 Search task">
+
+<div class="input-section">
+<input type="text" id="taskInput" placeholder="Enter task">
+<input type="date" id="dueDate">
+<select id="priority">
+<option value="low">Low</option>
+<option value="medium">Medium</option>
+<option value="high">High</option>
+</select>
+<button class="add-btn" onclick="addTask()">+</button>
+</div>
+
+<div class="section-title">Active Tasks</div>
+<div id="activeList"></div>
+
+<div class="section-title">Completed Tasks</div>
+<div id="completedList"></div>
+
+<p id="taskCount">0 tasks</p>
+
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<button class="theme-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+</div>
+
+<!-- 🎉 Celebration Box -->
+<div id="celebration" class="celebration">
+🎉 YEAHHH!! Congrats!! 🥳🔥
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
