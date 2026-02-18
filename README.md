@@ -27,13 +27,4 @@ Stay organized. Stay focused. Celebrate your wins. 🎉
 - Vanilla JavaScript  
 - LocalStorage API  
 
----
-
-## 📸 Preview
-
-(Add a screenshot here)
-
----
-
-## 📂 Project Structure
 
